@@ -163,13 +163,19 @@
   <data name="AGUAJE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGUAJE.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo renovacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo renovacion.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reloj 16-si fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reloj 16-si fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="personal-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personal-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reloj 16-si fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reloj 16-si fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoreno (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoreno (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

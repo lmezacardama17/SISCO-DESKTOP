@@ -32,7 +32,6 @@ namespace SISCO
         {
 
         }
-
         private void txtlogin_Enter(object sender, EventArgs e)
         {
             if(txtlogin.Text=="USUARIO"){
@@ -40,7 +39,6 @@ namespace SISCO
                 //txtlogin.ForeColor = Color.DarkBlue;
             }
         }
-
         private void txtlogin_Leave(object sender, EventArgs e)
         {
             if(txtlogin.Text == ""){
@@ -48,7 +46,6 @@ namespace SISCO
                 //txtlogin.ForeColor = Color.DarkBlue;
             }
         }
-
         private void txtclave_Enter(object sender, EventArgs e)
         {
             if (txtclave.Text == "PASSWORD")
@@ -58,7 +55,6 @@ namespace SISCO
                 txtclave.UseSystemPasswordChar = true;
             }
         }
-
         private void txtclave_Leave(object sender, EventArgs e)
         {
             if (txtclave.Text == "")
@@ -68,17 +64,14 @@ namespace SISCO
                 txtclave.UseSystemPasswordChar = false;
             }
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void LOGIN_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -108,7 +101,7 @@ namespace SISCO
 
                 if (objUsuario.ESTADO == 2)
                 {
-                    MessageBox.Show("EL USUARIO ESTA INACTIVO COMUNIQUESE CON EL ADMINISTRADOR DEK SISTEMA", " Usuario Desahabilitado!", MessageBoxButtons.OK);
+                    MessageBox.Show("EL USUARIO ESTA INACTIVO COMUNIQUESE CON EL ADMINISTRADOR DEL SISTEMA", " Usuario Desahabilitado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtlogin.Clear();
                     txtclave.Clear();
                     txtlogin.Focus();
@@ -116,54 +109,47 @@ namespace SISCO
                 else
                 {
                     string fecha = Convert.ToString(System.DateTime.Now.ToLocalTime());
-                    if(objUsuario.TIPO == 1)
+                    switch (objUsuario.TIPO)
                     {
-                        MessageBox.Show("ERES UN ADMINISTRADOR!", "OK!", MessageBoxButtons.OK);
-                      
-
-                    }
-                    else
-                    {
-                        if (objUsuario.TIPO == 2)
-                        {
-                            MessageBox.Show("ERES UN USUARIO!", "OK!", MessageBoxButtons.OK);
+                        case 1:
+                            MessageBox.Show("ERES UN ADMINISTRADOR!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case 2:
+                            MessageBox.Show("ERES UN USUARIO!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             oFormulario.btnSeguridad.Visible = false;
                             oFormulario.btnReportes.Visible = false;
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("ERES UN USUARIO LIMITADO!", "OK!", MessageBoxButtons.OK);
+                            break;
+                        default:
+                            MessageBox.Show("ERES UN USUARIO LIMITADO!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             oFormulario.btnSeguridad.Visible = false;
                             oFormulario.btnReportes.Visible = false;
                             oFormulario.btnCandidatos.Visible = false;
                             oFormulario.Partidos.Visible = false;
                             oFormulario.btnMesas.Visible = false;
-                        }
-                    }
+                            break;
+                    }            
                     oFormulario.lblUsuario.Text = objUsuario.NOMBRE_COMPLETO;
                     oFormulario.lblFechaIngreso.Text = fecha;
                     oFormulario.Show();
                     this.Hide();
                 }
-
             }
-            else {
-                if (contador == 3) {
+            else 
+            {
+                if (contador == 3) 
+                {
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("SU USUARIO  y/o CLAVE SON INCORRECTOS. QUEDAN " + total + " INTENTOS.", "Datos Incorrectos!", MessageBoxButtons.OK);
+                    MessageBox.Show("SU USUARIO  y/o CLAVE SON INCORRECTOS. QUEDAN " + total + " INTENTOS.", "Datos Incorrectos!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtlogin.Clear();
                     txtclave.Clear();
                     txtlogin.Focus();
-                }
-            
+                }            
             }
             
         }
-
         private void txtclave_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)(Keys.Enter))
@@ -180,13 +166,11 @@ namespace SISCO
                 SendKeys.Send("{TAB}");
             }
         }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CAMBIAR_CLAVE obj = new CAMBIAR_CLAVE();
             obj.Show();
         }
-
         private void LOGIN_Load(object sender, EventArgs e)
         {
 

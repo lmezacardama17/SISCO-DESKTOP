@@ -152,17 +152,16 @@ namespace SISCO
                 if (valor == Convert.ToString(row.Cells["PROV"].Value))
                 {
                     row.Cells["VOTOPROV"].ReadOnly = true;
-                    row.Cells["VOTOPROV"].Style.BackColor = Color.DarkRed;
+                    row.Cells["VOTOPROV"].Style.BackColor = Color.FromArgb(1, 99, 174);
                 }
                 else if (valor == Convert.ToString(row.Cells["DISTR"].Value))
                 {
                     row.Cells["VOTODISTR"].ReadOnly = true;
-                    row.Cells["VOTODISTR"].Style.BackColor = Color.DarkRed;
+                    row.Cells["VOTODISTR"].Style.BackColor = Color.FromArgb(1,99,174);
                 }
-               
+                
             }
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtNroVotacion.Text == "ESCRIBIR NRO MESA DE VOTACION" || txtNroVotacion.Text.Equals("") || cboxTipoMesa.Text == "SELECCIONE..")
@@ -260,7 +259,6 @@ namespace SISCO
             
 
         }
-
         private void ACTAS_Load(object sender, EventArgs e)
         {
             txtNroVotacion.Focus();
@@ -271,7 +269,6 @@ namespace SISCO
             cboxTipoMesa.DataSource = TipoMesa;
             
         }
-
         private void txtNroVotacion_MouseEnter(object sender, EventArgs e)
         {
             if (txtNroVotacion.Text == "ESCRIBIR NRO MESA DE VOTACION")
@@ -280,7 +277,6 @@ namespace SISCO
                 //txtNroVotacion.ForeColor = Color.DarkBlue;
             }
         }
-
         private void txtNroVotacion_MouseLeave(object sender, EventArgs e)
         {
             if (txtNroVotacion.Text == "")
@@ -289,7 +285,6 @@ namespace SISCO
                 //txtNroVotacion.ForeColor = Color.DarkBlue;
             }
         }
-
         private void cboxTipoMesa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (regional == Convert.ToString(cboxTipoMesa.Text))
@@ -311,7 +306,6 @@ namespace SISCO
                 tabPage3.Parent = null;
             }
         }
-
         private void txtNroVotacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)(Keys.Enter))
@@ -320,7 +314,6 @@ namespace SISCO
                 this.btnBuscar.PerformClick();
             }
         }
-
         private void ACTAS_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)(Keys.Enter))
@@ -329,8 +322,7 @@ namespace SISCO
                 SendKeys.Send("{TAB}");
             }
         }
-
-         private void dgvOrganizacion_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dgvOrganizacion_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             SendKeys.Send("{UP}");
             SendKeys.Send("{TAB}");
@@ -344,8 +336,7 @@ namespace SISCO
             total_Automatico_ProvincialM = Total_provincial;
             total_Automatico_DistritalM = Total_distrital;
         }
-
-         private void txtvblancoP_TextChanged(object sender, EventArgs e)
+        private void txtvblancoP_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -359,7 +350,6 @@ namespace SISCO
                 }
             }
         }
-
         private void txtvNulosP_TextChanged(object sender, EventArgs e)
          {
             try
@@ -374,8 +364,7 @@ namespace SISCO
                 }
             }
         }
-
-         private void txtinpugnadosP_TextChanged(object sender, EventArgs e)
+        private void txtinpugnadosP_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -389,8 +378,7 @@ namespace SISCO
                 }
             }
         }
-
-         private void txtTotalEmitidosP_TextChanged(object sender, EventArgs e)
+        private void txtTotalEmitidosP_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -411,8 +399,7 @@ namespace SISCO
                 }
             }
         }
-
-         private void txtvBlancoD_TextChanged(object sender, EventArgs e)
+        private void txtvBlancoD_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -426,8 +413,7 @@ namespace SISCO
                 }
             }
         }
-
-         private void txtvNulosD_TextChanged(object sender, EventArgs e)
+        private void txtvNulosD_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -442,8 +428,7 @@ namespace SISCO
             }
 
         }
-
-         private void txtvInpugnadosD_TextChanged(object sender, EventArgs e)
+        private void txtvInpugnadosD_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -457,8 +442,7 @@ namespace SISCO
                 }
             }
         }
-
-         private void txtvEmitidosD_TextChanged(object sender, EventArgs e)
+        private void txtvEmitidosD_TextChanged(object sender, EventArgs e)
          {
             try
             {
@@ -479,7 +463,6 @@ namespace SISCO
                 }
             }
         }
-
         private void btnguardar_Click(object sender, EventArgs e)
         {
             sender = MessageBox.Show("DESEA GUARDAR EL REGISTRO DEL ACTA DE VOTACION.?", "Advertencia!", MessageBoxButtons.YesNo);
@@ -584,7 +567,6 @@ namespace SISCO
                 }
             }
         }
-
         private void dgvOrganizacionRegional_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             SendKeys.Send("{UP}");
@@ -606,7 +588,6 @@ namespace SISCO
             
 
         }
-
         private void btnGuardarRegional_Click(object sender, EventArgs e)
         {
             sender = MessageBox.Show("DESEA GUARDAR EL REGISTRO DEL ACTA DE VOTACION.?", "Advertencia!", MessageBoxButtons.YesNo);
@@ -712,18 +693,15 @@ namespace SISCO
                 }
             }
         }
-
         private void dgvOrganizacionRegional_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
      
        
         }
-
         private void dgvOrganizacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void dgvOrganizacionRegional_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -733,7 +711,6 @@ namespace SISCO
 
             }
         }
-
         private void dgvOrganizacion_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -743,7 +720,6 @@ namespace SISCO
 
             }
         }
-
         private void txtVotosBlancoPRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -760,7 +736,6 @@ namespace SISCO
             }
             
         }
-
         private void txtVotosNulosPRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -776,7 +751,6 @@ namespace SISCO
                 }
             }
         }
-
         private void txtVotosInpugPRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -815,7 +789,6 @@ namespace SISCO
             }
             
         }
-
         private void txtVotosBlancoDRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -831,7 +804,6 @@ namespace SISCO
                 }
             }
         }
-
         private void txtVotosNulosDRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -847,7 +819,6 @@ namespace SISCO
                 }
             }
         }
-
         private void txtVotosInpugDRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -863,7 +834,6 @@ namespace SISCO
                 }
             }
         }
-
         private void txtTotalVotosEmiDRegional_TextChanged(object sender, EventArgs e)
         {
             try
@@ -887,7 +857,6 @@ namespace SISCO
             }
             
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 

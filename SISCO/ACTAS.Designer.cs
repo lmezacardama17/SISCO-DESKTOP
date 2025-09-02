@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,11 +41,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.cboxTipoMesa = new System.Windows.Forms.ComboBox();
             this.txtNroVotacion = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.lblverificadoRegional = new System.Windows.Forms.Label();
             this.txtTotalVotosAutomaticoD = new System.Windows.Forms.TextBox();
             this.txttotalVotosAutomaticoP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,6 +83,7 @@
             this.lblDeparRegional = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Organizacion = new System.Windows.Forms.GroupBox();
+            this.lblVerificadoMunicipal = new System.Windows.Forms.Label();
             this.txtTotalAutomaticoD = new System.Windows.Forms.TextBox();
             this.txtTotalAutomaticoP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -123,8 +122,6 @@
             this.lblNroMesa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblElecciones = new System.Windows.Forms.Label();
-            this.lblverificadoRegional = new System.Windows.Forms.Label();
-            this.lblVerificadoMunicipal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -152,9 +149,8 @@
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.cboxTipoMesa);
             this.groupBox1.Controls.Add(this.txtNroVotacion);
-            this.groupBox1.Controls.Add(this.shapeContainer1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(947, 65);
@@ -165,7 +161,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -194,37 +190,18 @@
             // 
             // txtNroVotacion
             // 
-            this.txtNroVotacion.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNroVotacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNroVotacion.BackColor = System.Drawing.Color.White;
+            this.txtNroVotacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNroVotacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNroVotacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.txtNroVotacion.Location = new System.Drawing.Point(16, 31);
+            this.txtNroVotacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
+            this.txtNroVotacion.Location = new System.Drawing.Point(7, 29);
             this.txtNroVotacion.Name = "txtNroVotacion";
-            this.txtNroVotacion.Size = new System.Drawing.Size(225, 16);
+            this.txtNroVotacion.Size = new System.Drawing.Size(234, 23);
             this.txtNroVotacion.TabIndex = 0;
             this.txtNroVotacion.Text = "ESCRIBIR NRO MESA DE VOTACION";
             this.txtNroVotacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroVotacion_KeyPress);
             this.txtNroVotacion.MouseEnter += new System.EventHandler(this.txtNroVotacion_MouseEnter);
             this.txtNroVotacion.MouseLeave += new System.EventHandler(this.txtNroVotacion_MouseLeave);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 19);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(941, 43);
-            this.shapeContainer1.TabIndex = 3;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 13;
-            this.lineShape1.X2 = 228;
-            this.lineShape1.Y1 = 30;
-            this.lineShape1.Y2 = 30;
             // 
             // tabControl1
             // 
@@ -250,7 +227,7 @@
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.groupBox11);
-            this.tabPage1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -283,13 +260,26 @@
             this.groupBox12.Controls.Add(this.txtVotosNulosPRegional);
             this.groupBox12.Controls.Add(this.txtVotosBlancoPRegional);
             this.groupBox12.Controls.Add(this.dgvOrganizacionRegional);
-            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox12.ForeColor = System.Drawing.Color.Black;
             this.groupBox12.Location = new System.Drawing.Point(9, 106);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(921, 289);
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "INFORMACION DEL ACTA ELECTORAL";
+            // 
+            // lblverificadoRegional
+            // 
+            this.lblverificadoRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblverificadoRegional.AutoSize = true;
+            this.lblverificadoRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblverificadoRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
+            this.lblverificadoRegional.Location = new System.Drawing.Point(7, 163);
+            this.lblverificadoRegional.Name = "lblverificadoRegional";
+            this.lblverificadoRegional.Size = new System.Drawing.Size(125, 16);
+            this.lblverificadoRegional.TabIndex = 18;
+            this.lblverificadoRegional.Text = "NO ESPECIFICADO";
+            this.lblverificadoRegional.Visible = false;
             // 
             // txtTotalVotosAutomaticoD
             // 
@@ -322,7 +312,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label1.Location = new System.Drawing.Point(6, 251);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 16);
@@ -386,7 +376,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label9.Location = new System.Drawing.Point(6, 226);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(183, 16);
@@ -398,7 +388,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label10.Location = new System.Drawing.Point(573, 226);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 16);
@@ -410,7 +400,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label11.Location = new System.Drawing.Point(542, 202);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 16);
@@ -422,7 +412,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label12.Location = new System.Drawing.Point(588, 180);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 16);
@@ -434,7 +424,7 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label14.Location = new System.Drawing.Point(569, 158);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 16);
@@ -444,7 +434,7 @@
             // btnGuardarRegional
             // 
             this.btnGuardarRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarRegional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnGuardarRegional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnGuardarRegional.FlatAppearance.BorderSize = 0;
             this.btnGuardarRegional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGuardarRegional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -521,7 +511,7 @@
             this.dgvOrganizacionRegional.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvOrganizacionRegional.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -537,9 +527,10 @@
             this.VOTOREG,
             this.VOTOCONS});
             this.dgvOrganizacionRegional.EnableHeadersVisualStyles = false;
-            this.dgvOrganizacionRegional.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.dgvOrganizacionRegional.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.dgvOrganizacionRegional.Location = new System.Drawing.Point(6, 22);
             this.dgvOrganizacionRegional.Name = "dgvOrganizacionRegional";
+            this.dgvOrganizacionRegional.RowHeadersVisible = false;
             this.dgvOrganizacionRegional.Size = new System.Drawing.Size(906, 127);
             this.dgvOrganizacionRegional.TabIndex = 1;
             this.dgvOrganizacionRegional.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrganizacionRegional_CellDoubleClick);
@@ -620,7 +611,7 @@
             // 
             this.lblNroMesaRegional.AutoSize = true;
             this.lblNroMesaRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroMesaRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblNroMesaRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblNroMesaRegional.Location = new System.Drawing.Point(6, 19);
             this.lblNroMesaRegional.Name = "lblNroMesaRegional";
             this.lblNroMesaRegional.Size = new System.Drawing.Size(83, 16);
@@ -642,7 +633,7 @@
             // 
             this.lblTotalElectoresRegional.AutoSize = true;
             this.lblTotalElectoresRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalElectoresRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblTotalElectoresRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblTotalElectoresRegional.Location = new System.Drawing.Point(84, 18);
             this.lblTotalElectoresRegional.Name = "lblTotalElectoresRegional";
             this.lblTotalElectoresRegional.Size = new System.Drawing.Size(29, 16);
@@ -655,7 +646,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEleccionesRegional.AutoSize = true;
             this.lblEleccionesRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEleccionesRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblEleccionesRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblEleccionesRegional.Location = new System.Drawing.Point(320, 8);
             this.lblEleccionesRegional.Name = "lblEleccionesRegional";
             this.lblEleccionesRegional.Size = new System.Drawing.Size(305, 16);
@@ -678,7 +669,7 @@
             // 
             this.lblDistrRegional.AutoSize = true;
             this.lblDistrRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblDistrRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblDistrRegional.Location = new System.Drawing.Point(7, 16);
             this.lblDistrRegional.Name = "lblDistrRegional";
             this.lblDistrRegional.Size = new System.Drawing.Size(63, 16);
@@ -701,7 +692,7 @@
             // 
             this.lblProvRegional.AutoSize = true;
             this.lblProvRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblProvRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblProvRegional.Location = new System.Drawing.Point(6, 15);
             this.lblProvRegional.Name = "lblProvRegional";
             this.lblProvRegional.Size = new System.Drawing.Size(81, 16);
@@ -714,7 +705,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label13.Location = new System.Drawing.Point(386, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(184, 24);
@@ -736,7 +727,7 @@
             // 
             this.lblDeparRegional.AutoSize = true;
             this.lblDeparRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeparRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblDeparRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblDeparRegional.Location = new System.Drawing.Point(6, 16);
             this.lblDeparRegional.Name = "lblDeparRegional";
             this.lblDeparRegional.Size = new System.Drawing.Size(111, 16);
@@ -753,7 +744,7 @@
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.lblElecciones);
-            this.tabPage3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tabPage3.ForeColor = System.Drawing.Color.Black;
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -786,12 +777,26 @@
             this.Organizacion.Controls.Add(this.txtvNulosP);
             this.Organizacion.Controls.Add(this.txtvblancoP);
             this.Organizacion.Controls.Add(this.dgvOrganizacion);
+            this.Organizacion.ForeColor = System.Drawing.Color.Black;
             this.Organizacion.Location = new System.Drawing.Point(9, 110);
             this.Organizacion.Name = "Organizacion";
             this.Organizacion.Size = new System.Drawing.Size(921, 289);
             this.Organizacion.TabIndex = 0;
             this.Organizacion.TabStop = false;
             this.Organizacion.Text = "INFORMACION DEL ACTA ELECTORAL";
+            // 
+            // lblVerificadoMunicipal
+            // 
+            this.lblVerificadoMunicipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblVerificadoMunicipal.AutoSize = true;
+            this.lblVerificadoMunicipal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerificadoMunicipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
+            this.lblVerificadoMunicipal.Location = new System.Drawing.Point(6, 163);
+            this.lblVerificadoMunicipal.Name = "lblVerificadoMunicipal";
+            this.lblVerificadoMunicipal.Size = new System.Drawing.Size(125, 16);
+            this.lblVerificadoMunicipal.TabIndex = 19;
+            this.lblVerificadoMunicipal.Text = "NO ESPECIFICADO";
+            this.lblVerificadoMunicipal.Visible = false;
             // 
             // txtTotalAutomaticoD
             // 
@@ -824,7 +829,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label8.Location = new System.Drawing.Point(23, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(187, 16);
@@ -888,7 +893,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label7.Location = new System.Drawing.Point(24, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(186, 16);
@@ -900,7 +905,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label6.Location = new System.Drawing.Point(573, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
@@ -912,7 +917,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label5.Location = new System.Drawing.Point(542, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
@@ -924,7 +929,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label4.Location = new System.Drawing.Point(588, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
@@ -936,7 +941,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label3.Location = new System.Drawing.Point(569, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 16);
@@ -946,7 +951,7 @@
             // btnguardar
             // 
             this.btnguardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnguardar.FlatAppearance.BorderSize = 0;
             this.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1023,7 +1028,7 @@
             this.dgvOrganizacion.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvOrganizacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -1040,18 +1045,11 @@
             this.LOGO1,
             this.VOTOPROV,
             this.VOTODISTR});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrganizacion.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvOrganizacion.EnableHeadersVisualStyles = false;
-            this.dgvOrganizacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.dgvOrganizacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.dgvOrganizacion.Location = new System.Drawing.Point(6, 22);
             this.dgvOrganizacion.Name = "dgvOrganizacion";
+            this.dgvOrganizacion.RowHeadersVisible = false;
             this.dgvOrganizacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvOrganizacion.Size = new System.Drawing.Size(906, 127);
             this.dgvOrganizacion.TabIndex = 0;
@@ -1153,7 +1151,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblDepartamento.Location = new System.Drawing.Point(6, 16);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(111, 16);
@@ -1175,7 +1173,7 @@
             // 
             this.lblDistrito.AutoSize = true;
             this.lblDistrito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblDistrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblDistrito.Location = new System.Drawing.Point(7, 16);
             this.lblDistrito.Name = "lblDistrito";
             this.lblDistrito.Size = new System.Drawing.Size(63, 16);
@@ -1198,7 +1196,7 @@
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblProvincia.Location = new System.Drawing.Point(6, 15);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(81, 16);
@@ -1220,7 +1218,7 @@
             // 
             this.lblTotalElectores.AutoSize = true;
             this.lblTotalElectores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalElectores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblTotalElectores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblTotalElectores.Location = new System.Drawing.Point(84, 18);
             this.lblTotalElectores.Name = "lblTotalElectores";
             this.lblTotalElectores.Size = new System.Drawing.Size(29, 16);
@@ -1241,7 +1239,7 @@
             // 
             this.lblNroMesa.AutoSize = true;
             this.lblNroMesa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroMesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblNroMesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblNroMesa.Location = new System.Drawing.Point(6, 19);
             this.lblNroMesa.Name = "lblNroMesa";
             this.lblNroMesa.Size = new System.Drawing.Size(83, 16);
@@ -1254,7 +1252,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.label2.Location = new System.Drawing.Point(386, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 25);
@@ -1268,7 +1266,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblElecciones.AutoSize = true;
             this.lblElecciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElecciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.lblElecciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.lblElecciones.Location = new System.Drawing.Point(320, 12);
             this.lblElecciones.Name = "lblElecciones";
             this.lblElecciones.Size = new System.Drawing.Size(305, 16);
@@ -1276,36 +1274,11 @@
             this.lblElecciones.Text = "ELECCIONES REGIONALES Y MUNICIPALES 2022";
             this.lblElecciones.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblverificadoRegional
-            // 
-            this.lblverificadoRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblverificadoRegional.AutoSize = true;
-            this.lblverificadoRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblverificadoRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.lblverificadoRegional.Location = new System.Drawing.Point(7, 163);
-            this.lblverificadoRegional.Name = "lblverificadoRegional";
-            this.lblverificadoRegional.Size = new System.Drawing.Size(125, 16);
-            this.lblverificadoRegional.TabIndex = 18;
-            this.lblverificadoRegional.Text = "NO ESPECIFICADO";
-            this.lblverificadoRegional.Visible = false;
-            // 
-            // lblVerificadoMunicipal
-            // 
-            this.lblVerificadoMunicipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblVerificadoMunicipal.AutoSize = true;
-            this.lblVerificadoMunicipal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerificadoMunicipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.lblVerificadoMunicipal.Location = new System.Drawing.Point(6, 163);
-            this.lblVerificadoMunicipal.Name = "lblVerificadoMunicipal";
-            this.lblVerificadoMunicipal.Size = new System.Drawing.Size(125, 16);
-            this.lblVerificadoMunicipal.TabIndex = 19;
-            this.lblVerificadoMunicipal.Text = "NO ESPECIFICADO";
-            this.lblVerificadoMunicipal.Visible = false;
-            // 
             // ACTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(972, 530);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
@@ -1355,8 +1328,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.TextBox txtNroVotacion;
         private System.Windows.Forms.ComboBox cboxTipoMesa;
         private System.Windows.Forms.Button btnBuscar;

@@ -35,10 +35,6 @@
             this.txtnuevaClave = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtdni = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -55,10 +51,9 @@
             this.groupBox1.Controls.Add(this.txtnuevaClave);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtdni);
-            this.groupBox1.Controls.Add(this.shapeContainer1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 185);
@@ -68,7 +63,7 @@
             // 
             // btnValidar
             // 
-            this.btnValidar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnValidar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnValidar.FlatAppearance.BorderSize = 0;
             this.btnValidar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,33 +90,35 @@
             // 
             // txtConfirmarClave
             // 
-            this.txtConfirmarClave.BackColor = System.Drawing.SystemColors.Control;
-            this.txtConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmarClave.BackColor = System.Drawing.Color.White;
+            this.txtConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmarClave.Enabled = false;
-            this.txtConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtConfirmarClave.Location = new System.Drawing.Point(15, 88);
+            this.txtConfirmarClave.MaxLength = 10;
             this.txtConfirmarClave.Name = "txtConfirmarClave";
-            this.txtConfirmarClave.Size = new System.Drawing.Size(350, 16);
+            this.txtConfirmarClave.Size = new System.Drawing.Size(350, 23);
             this.txtConfirmarClave.TabIndex = 3;
             this.txtConfirmarClave.Text = "CONFIRMA TU NUEVA CONTRASEÑA";
             this.txtConfirmarClave.UseSystemPasswordChar = true;
             // 
             // txtnuevaClave
             // 
-            this.txtnuevaClave.BackColor = System.Drawing.SystemColors.Control;
-            this.txtnuevaClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtnuevaClave.BackColor = System.Drawing.Color.White;
+            this.txtnuevaClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtnuevaClave.Enabled = false;
-            this.txtnuevaClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtnuevaClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtnuevaClave.Location = new System.Drawing.Point(15, 57);
+            this.txtnuevaClave.MaxLength = 10;
             this.txtnuevaClave.Name = "txtnuevaClave";
-            this.txtnuevaClave.Size = new System.Drawing.Size(350, 16);
+            this.txtnuevaClave.Size = new System.Drawing.Size(350, 23);
             this.txtnuevaClave.TabIndex = 2;
             this.txtnuevaClave.Text = "ESCRIBE TU NUEVA CONTRASEÑA";
             this.txtnuevaClave.UseSystemPasswordChar = true;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnGuardar.Enabled = false;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -137,52 +134,15 @@
             // 
             // txtdni
             // 
-            this.txtdni.BackColor = System.Drawing.SystemColors.Control;
-            this.txtdni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdni.BackColor = System.Drawing.Color.White;
+            this.txtdni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtdni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtdni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtdni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtdni.Location = new System.Drawing.Point(15, 22);
             this.txtdni.Name = "txtdni";
-            this.txtdni.Size = new System.Drawing.Size(248, 16);
+            this.txtdni.Size = new System.Drawing.Size(248, 23);
             this.txtdni.TabIndex = 0;
             this.txtdni.Text = "ESCRIBE TU NRO DE DNI";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 19);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1,
-            this.lineShape4,
-            this.lineShape2});
-            this.shapeContainer1.Size = new System.Drawing.Size(468, 163);
-            this.shapeContainer1.TabIndex = 5;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 9;
-            this.lineShape1.X2 = 353;
-            this.lineShape1.Y1 = 61;
-            this.lineShape1.Y2 = 61;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 7;
-            this.lineShape4.X2 = 354;
-            this.lineShape4.Y1 = 91;
-            this.lineShape4.Y2 = 91;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 12;
-            this.lineShape2.X2 = 267;
-            this.lineShape2.Y1 = 22;
-            this.lineShape2.Y2 = 22;
             // 
             // btnCerrar
             // 
@@ -199,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(498, 222);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
@@ -224,10 +185,6 @@
         private System.Windows.Forms.TextBox txtnuevaClave;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtdni;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Button btnValidar;
     }

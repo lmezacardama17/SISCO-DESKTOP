@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.Reporte_de_MesasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DSetPrincipal = new SISCO.DSetPrincipal();
+            this.STP_MESASXCOLEGIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboxDist = new System.Windows.Forms.ComboBox();
             this.cboxProv = new System.Windows.Forms.ComboBox();
@@ -42,35 +45,48 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cboxDistrito = new System.Windows.Forms.ComboBox();
             this.cboxProvincia = new System.Windows.Forms.ComboBox();
             this.cboxDepartamento = new System.Windows.Forms.ComboBox();
             this.cboxTipoActa = new System.Windows.Forms.ComboBox();
             this.btnBuscarCOL = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Reporte_de_MesasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DSetPrincipal = new SISCO.DSetPrincipal();
             this.Reporte_de_MesasTableAdapter = new SISCO.DSetPrincipalTableAdapters.Reporte_de_MesasTableAdapter();
-            this.STP_MESASXCOLEGIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.STP_MESASXCOLEGIOSTableAdapter = new SISCO.DSetPrincipalTableAdapters.STP_MESASXCOLEGIOSTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.Reporte_de_MesasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSetPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STP_MESASXCOLEGIOSBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Reporte_de_MesasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DSetPrincipal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.STP_MESASXCOLEGIOSBindingSource)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Reporte_de_MesasBindingSource
+            // 
+            this.Reporte_de_MesasBindingSource.DataMember = "Reporte_de_Mesas";
+            this.Reporte_de_MesasBindingSource.DataSource = this.DSetPrincipal;
+            // 
+            // DSetPrincipal
+            // 
+            this.DSetPrincipal.DataSetName = "DSetPrincipal";
+            this.DSetPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // STP_MESASXCOLEGIOSBindingSource
+            // 
+            this.STP_MESASXCOLEGIOSBindingSource.DataMember = "STP_MESASXCOLEGIOS";
+            this.STP_MESASXCOLEGIOSBindingSource.DataSource = this.DSetPrincipal;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.cboxDist);
             this.groupBox1.Controls.Add(this.cboxProv);
             this.groupBox1.Controls.Add(this.cboxDepa);
@@ -78,7 +94,7 @@
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(745, 70);
@@ -138,7 +154,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,7 +175,7 @@
             this.groupBox2.Controls.Add(this.reportViewer1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(6, 82);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(745, 315);
@@ -170,9 +186,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Reporte_de_MesasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.Reporte_de_MesasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SISCO.Reporte_Mesas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 19);
             this.reportViewer1.Name = "reportViewer1";
@@ -217,6 +233,34 @@
             this.tabPage2.Text = "MESAS X COLEGIO";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.reportViewer2);
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
+            this.groupBox4.Location = new System.Drawing.Point(6, 82);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(745, 315);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "CONTENIDO DEL REPORTE - ERM 2022";
+            // 
+            // reportViewer2
+            // 
+            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.STP_MESASXCOLEGIOSBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "SISCO.Mesas_x_Colegios.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(3, 19);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(739, 293);
+            this.reportViewer2.TabIndex = 0;
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -228,7 +272,7 @@
             this.groupBox3.Controls.Add(this.btnBuscarCOL);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(745, 70);
@@ -286,7 +330,7 @@
             // btnBuscarCOL
             // 
             this.btnBuscarCOL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarCOL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnBuscarCOL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnBuscarCOL.FlatAppearance.BorderSize = 0;
             this.btnBuscarCOL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBuscarCOL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -299,52 +343,9 @@
             this.btnBuscarCOL.UseVisualStyleBackColor = false;
             this.btnBuscarCOL.Click += new System.EventHandler(this.btnBuscarCOL_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.reportViewer2);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.groupBox4.Location = new System.Drawing.Point(6, 82);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(745, 315);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "CONTENIDO DEL REPORTE - ERM 2022";
-            // 
-            // reportViewer2
-            // 
-            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.STP_MESASXCOLEGIOSBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "SISCO.Mesas_x_Colegios.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(3, 19);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(739, 293);
-            this.reportViewer2.TabIndex = 0;
-            // 
-            // Reporte_de_MesasBindingSource
-            // 
-            this.Reporte_de_MesasBindingSource.DataMember = "Reporte_de_Mesas";
-            this.Reporte_de_MesasBindingSource.DataSource = this.DSetPrincipal;
-            // 
-            // DSetPrincipal
-            // 
-            this.DSetPrincipal.DataSetName = "DSetPrincipal";
-            this.DSetPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Reporte_de_MesasTableAdapter
             // 
             this.Reporte_de_MesasTableAdapter.ClearBeforeFill = true;
-            // 
-            // STP_MESASXCOLEGIOSBindingSource
-            // 
-            this.STP_MESASXCOLEGIOSBindingSource.DataMember = "STP_MESASXCOLEGIOS";
-            this.STP_MESASXCOLEGIOSBindingSource.DataSource = this.DSetPrincipal;
             // 
             // STP_MESASXCOLEGIOSTableAdapter
             // 
@@ -354,6 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(789, 456);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -361,16 +363,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REPORTE_MESAS";
             this.Load += new System.EventHandler(this.REPORTE_MESAS_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Reporte_de_MesasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSetPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STP_MESASXCOLEGIOSBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Reporte_de_MesasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DSetPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.STP_MESASXCOLEGIOSBindingSource)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
