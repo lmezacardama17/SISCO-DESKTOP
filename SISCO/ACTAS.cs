@@ -152,7 +152,7 @@ namespace SISCO
                 if (valor == Convert.ToString(row.Cells["PROV"].Value))
                 {
                     row.Cells["VOTOPROV"].ReadOnly = true;
-                    row.Cells["VOTOPROV"].Style.BackColor = Color.FromArgb(1, 99, 174);
+                    row.Cells["VOTOPROV"].Style.BackColor = Color.FromArgb(1,99,174);
                 }
                 else if (valor == Convert.ToString(row.Cells["DISTR"].Value))
                 {

@@ -309,7 +309,8 @@
             // 
             this.btnAnalisisElectoral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnAnalisisElectoral.FlatAppearance.BorderSize = 0;
-            this.btnAnalisisElectoral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAnalisisElectoral.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnAnalisisElectoral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnAnalisisElectoral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnalisisElectoral.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalisisElectoral.ForeColor = System.Drawing.Color.White;
@@ -326,7 +327,8 @@
             // 
             this.btnrptActas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnrptActas.FlatAppearance.BorderSize = 0;
-            this.btnrptActas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnrptActas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnrptActas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnrptActas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnrptActas.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrptActas.ForeColor = System.Drawing.Color.White;
@@ -351,7 +353,8 @@
             // 
             this.btnrptMesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnrptMesas.FlatAppearance.BorderSize = 0;
-            this.btnrptMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnrptMesas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnrptMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnrptMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnrptMesas.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrptMesas.ForeColor = System.Drawing.Color.White;
@@ -376,7 +379,8 @@
             // 
             this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
@@ -402,7 +406,8 @@
             // 
             this.btnSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnSeguridad.FlatAppearance.BorderSize = 0;
-            this.btnSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnSeguridad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguridad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeguridad.ForeColor = System.Drawing.Color.White;
@@ -428,7 +433,8 @@
             // 
             this.Partidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.Partidos.FlatAppearance.BorderSize = 0;
-            this.Partidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Partidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.Partidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.Partidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Partidos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Partidos.ForeColor = System.Drawing.Color.White;
@@ -454,7 +460,8 @@
             // 
             this.btnCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnCandidatos.FlatAppearance.BorderSize = 0;
-            this.btnCandidatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCandidatos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnCandidatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCandidatos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCandidatos.ForeColor = System.Drawing.Color.White;
@@ -480,7 +487,8 @@
             // 
             this.btnMesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnMesas.FlatAppearance.BorderSize = 0;
-            this.btnMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnMesas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMesas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMesas.ForeColor = System.Drawing.Color.White;
@@ -506,7 +514,8 @@
             // 
             this.btnActas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.btnActas.FlatAppearance.BorderSize = 0;
-            this.btnActas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnActas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnActas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(206)))), ((int)(((byte)(229)))));
             this.btnActas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActas.ForeColor = System.Drawing.Color.White;
