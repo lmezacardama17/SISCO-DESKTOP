@@ -143,6 +143,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNUEVO_PROCESO_ELECTORAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNUEVO_PROCESO_ELECTORAL.Designer.cs">
+      <DependentUpon>frmNUEVO_PROCESO_ELECTORAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPROCESO_ELECTORAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPROCESO_ELECTORAL.Designer.cs">
+      <DependentUpon>frmPROCESO_ELECTORAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNUEVO_PROCESO_ELECTORAL.resx">
+      <DependentUpon>frmNUEVO_PROCESO_ELECTORAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPROCESO_ELECTORAL.resx">
+      <DependentUpon>frmPROCESO_ELECTORAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>

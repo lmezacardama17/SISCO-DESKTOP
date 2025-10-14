@@ -75,7 +75,7 @@ namespace SISCO
             tabla.Columns.Add("Descripcion");
             tabla.Rows.Add("1", "ADMINISTRADOR");
             tabla.Rows.Add("2", "USUARIO");
-            tabla.Rows.Add("3", "LIMITADO");
+            tabla.Rows.Add("3", "OPERADOR");
             // Añadimos en la primera fila un nuevo Item
             DataRow filaprimera = tabla.NewRow();
             filaprimera["Id"] = "0";

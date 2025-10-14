@@ -166,11 +166,10 @@ namespace SISCO
         {
             if (txtNroVotacion.Text == "ESCRIBIR NRO MESA DE VOTACION" || txtNroVotacion.Text.Equals("") || cboxTipoMesa.Text == "SELECCIONE..")
             {
-                MessageBox.Show("ESCRIBE UN NRO DE MESA VALIDOS y/o SELECCIONE TIPO DE ACTA ", "Aviso!", MessageBoxButtons.OK);
+                MessageBox.Show("ESCRIBE UN NRO DE MESA VALIDOS y/o SELECCIONE TIPO DE ACTA ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNroVotacion.ResetText();
                 dgvOrganizacion.DataSource = null;
                 txtNroVotacion.Focus();
-
             }
             else
             {
@@ -181,76 +180,93 @@ namespace SISCO
                 if (objActasV != null)
                 {
                     existeNroMesa = 1;
-                    if (objActasV.ESTADO=="REGISTRADO")
+                    switch (objActasV.ESTADO)
                     {
-                        MessageBox.Show("EL NRO DE MESA "+ palabra + " YA SE ENCUENTRA REGISTRADO ", "Aviso!", MessageBoxButtons.OK);
-                    }
-                    else if(objActasV.ESTADO == "VERIFICADO")
-                    {
-                        MessageBox.Show(" EL NRO DE MESA DE SUFRAGIO " + palabra + " FALTA SU VERIFICACION.", "Aviso!", MessageBoxButtons.OK);
-                        if (tabControl1.SelectedTab == tabPage1)
-                        {
-                            lblNroMesaRegional.Text = objActasV.NRO_MESA;
-                            lblDeparRegional.Text = objActasV.DEPARTAMENTO;
-                            lblProvRegional.Text = objActasV.PROVINCIA;
-                            lblDistrRegional.Text = objActasV.DISTRITO;
-                            lblTotalElectoresRegional.Text = Convert.ToString(objActasV.TOTAL_HABILES);
-                            CargarPartidoRegionalVerficado();
-                            CabecerRegional();
-                            dgvOrganizacionRegional.CurrentCell = dgvOrganizacionRegional.Rows[0].Cells[4];
-                            dgvOrganizacionRegional.BeginEdit(true);
-                        }
-                        else if (tabControl1.SelectedTab == tabPage3) 
-                        {
-                            lblNroMesa.Text = objActasV.NRO_MESA;
-                            lblDepartamento.Text = objActasV.DEPARTAMENTO;
-                            lblProvincia.Text = objActasV.PROVINCIA;
-                            lblDistrito.Text = objActasV.DISTRITO;
-                            lblTotalElectores.Text = Convert.ToString(objActasV.TOTAL_HABILES);
-                            CargarPartidoMunicipalVerificado();
-                            CabecerRegional();
-                            dgvOrganizacion.CurrentCell = dgvOrganizacion.Rows[0].Cells[6];
-                            dgvOrganizacion.BeginEdit(true);
+                        case "REGISTRADO":
+                            MessageBox.Show("EL NRO DE MESA " + palabra + " YA SE ENCUENTRA REGISTRADO! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case "VERIFICADO":
+                            MessageBox.Show(" EL NRO DE MESA DE SUFRAGIO " + palabra + " FALTA SU VERIFICACION.", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            switch (cboxTipoMesa.Text)
+                            {
+                                case "ACTA REGIONAL":
+                                    tabControl1.SelectedTab = tabPage1;
+                                    lblNroMesaRegional.Text = objActasV.NRO_MESA;
+                                    lblDeparRegional.Text = objActasV.DEPARTAMENTO;
+                                    lblProvRegional.Text = objActasV.PROVINCIA;
+                                    lblDistrRegional.Text = objActasV.DISTRITO;
+                                    lblTotalElectoresRegional.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+                                    CargarPartidoRegionalVerficado();
+                                    CabecerRegional();
+                                    dgvOrganizacionRegional.CurrentCell = dgvOrganizacionRegional.Rows[0].Cells[4];
+                                    dgvOrganizacionRegional.BeginEdit(true);
+                                    break;
+                                case "ACTA MUNICIPAL":
+                                    tabControl1.SelectedTab = tabPage3;
+                                    break;
+                            }
+                            //if (tabControl1.SelectedTab == tabPage1)
+                            //{
+                            //    lblNroMesaRegional.Text = objActasV.NRO_MESA;
+                            //    lblDeparRegional.Text = objActasV.DEPARTAMENTO;
+                            //    lblProvRegional.Text = objActasV.PROVINCIA;
+                            //    lblDistrRegional.Text = objActasV.DISTRITO;
+                            //    lblTotalElectoresRegional.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+                            //    CargarPartidoRegionalVerficado();
+                            //    CabecerRegional();
+                            //    dgvOrganizacionRegional.CurrentCell = dgvOrganizacionRegional.Rows[0].Cells[4];
+                            //    dgvOrganizacionRegional.BeginEdit(true);
+                            //}
+                            //else if (tabControl1.SelectedTab == tabPage3)
+                            //{
+                            //    lblNroMesa.Text = objActasV.NRO_MESA;
+                            //    lblDepartamento.Text = objActasV.DEPARTAMENTO;
+                            //    lblProvincia.Text = objActasV.PROVINCIA;
+                            //    lblDistrito.Text = objActasV.DISTRITO;
+                            //    lblTotalElectores.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+                            //    CargarPartidoMunicipalVerificado();
+                            //    CabecerRegional();
+                            //    dgvOrganizacion.CurrentCell = dgvOrganizacion.Rows[0].Cells[6];
+                            //    dgvOrganizacion.BeginEdit(true);
 
-                        }
-                    }
-                    else if (objActasV.ESTADO == "SIN REGISTRAR")
-                    {
-                        MessageBox.Show(" EL NRO DE MESA DE SUFRAGIO " + palabra + " EXISTE EN LA BASE DE DATOS.", "Aviso!", MessageBoxButtons.OK);
-                                               
-                        if (tabControl1.SelectedTab == tabPage1)
-                        {
-                            lblNroMesaRegional.Text = objActasV.NRO_MESA;
-                            lblDeparRegional.Text = objActasV.DEPARTAMENTO;
-                            lblProvRegional.Text = objActasV.PROVINCIA;
-                            lblDistrRegional.Text = objActasV.DISTRITO;
-                            lblTotalElectoresRegional.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+                            //}
+                            break;
+                        case "SIN REGISTRAR":
+                            MessageBox.Show(" EL NRO DE MESA DE SUFRAGIO " + palabra + " EXISTE EN LA BASE DE DATOS.", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            CargarPartidoRegional();
-                            dgvOrganizacionRegional.CurrentCell = dgvOrganizacionRegional.Rows[0].Cells[4];
-                            dgvOrganizacionRegional.BeginEdit(true);
-                            
-                       
-                        }
-                        else if (tabControl1.SelectedTab == tabPage3)
-                        {
-                            lblNroMesa.Text = objActasV.NRO_MESA;
-                            lblDepartamento.Text = objActasV.DEPARTAMENTO;
-                            lblProvincia.Text = objActasV.PROVINCIA;
-                            lblDistrito.Text = objActasV.DISTRITO;
-                            lblTotalElectores.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+                            if (tabControl1.SelectedTab == tabPage1)
+                            {
+                                lblNroMesaRegional.Text = objActasV.NRO_MESA;
+                                lblDeparRegional.Text = objActasV.DEPARTAMENTO;
+                                lblProvRegional.Text = objActasV.PROVINCIA;
+                                lblDistrRegional.Text = objActasV.DISTRITO;
+                                lblTotalElectoresRegional.Text = Convert.ToString(objActasV.TOTAL_HABILES);
 
-                            CargarPartidoMunicipal();
-                            dgvOrganizacion.CurrentCell = dgvOrganizacion.Rows[0].Cells[6];
-                            dgvOrganizacion.BeginEdit(true);
-                                                      
-                        }
-                    }
-                   
+                                CargarPartidoRegional();
+                                dgvOrganizacionRegional.CurrentCell = dgvOrganizacionRegional.Rows[0].Cells[4];
+                                dgvOrganizacionRegional.BeginEdit(true);
+
+
+                            }
+                            else if (tabControl1.SelectedTab == tabPage3)
+                            {
+                                lblNroMesa.Text = objActasV.NRO_MESA;
+                                lblDepartamento.Text = objActasV.DEPARTAMENTO;
+                                lblProvincia.Text = objActasV.PROVINCIA;
+                                lblDistrito.Text = objActasV.DISTRITO;
+                                lblTotalElectores.Text = Convert.ToString(objActasV.TOTAL_HABILES);
+
+                                CargarPartidoMunicipal();
+                                dgvOrganizacion.CurrentCell = dgvOrganizacion.Rows[0].Cells[6];
+                                dgvOrganizacion.BeginEdit(true);
+
+                            }
+                            break;
+                    }                   
                 }
                 else
                 {
-                    MessageBox.Show("EL NRO DE MESA NO EXISTE EN LA BASE DE DATOS.", "Aviso!", MessageBoxButtons.OK);
+                    MessageBox.Show("EL NRO DE MESA NO EXISTE EN LA BASE DE DATOS.", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtNroVotacion.ResetText();
                     dgvOrganizacion.DataSource = null;
                     txtNroVotacion.Focus();

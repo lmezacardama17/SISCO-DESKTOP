@@ -15,6 +15,8 @@ namespace SISCO
 {
     public partial class Form1 : Form
     {
+        public int id_proceso_electoral;
+        public string dni_user;
         public Form1()
         {
             InitializeComponent();
@@ -93,6 +95,7 @@ namespace SISCO
         {
 
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

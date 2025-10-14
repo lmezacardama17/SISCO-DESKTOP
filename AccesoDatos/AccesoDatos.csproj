@@ -48,7 +48,9 @@
     <Compile Include="detalle_actasAD.cs" />
     <Compile Include="mesasAD.cs" />
     <Compile Include="partidoAD.cs" />
+    <Compile Include="proceso_electoralAD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tipo_actasAD.cs" />
     <Compile Include="ubdepartamentoAD.cs" />
     <Compile Include="ubdistritoAD.cs" />
     <Compile Include="ubprovinciaAD.cs" />

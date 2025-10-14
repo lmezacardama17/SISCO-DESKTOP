@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using AccesoDatos;
 using LogicaNegocio;
 using Entidades;
 
@@ -83,12 +84,11 @@ namespace SISCO
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Incriptacion oIncriptar = new Incriptacion();
             Incriptado = oIncriptar.Encriptar(txtclave.Text);
-            Form1 oFormulario = new Form1();
+            frmPROCESO_ELECTORAL objproceso = new frmPROCESO_ELECTORAL();
 
             usuario objUsuario;
             usuarioLN objUsuarioLN = new usuarioLN();
@@ -108,30 +108,36 @@ namespace SISCO
                 }
                 else
                 {
-                    string fecha = Convert.ToString(System.DateTime.Now.ToLocalTime());
-                    switch (objUsuario.TIPO)
+                    DataTable dt = proceso_electoralAD.ListaProcesoElectoral();
+                    if (dt.Rows.Count > 0)
                     {
-                        case 1:
-                            MessageBox.Show("ERES UN ADMINISTRADOR!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            break;
-                        case 2:
-                            MessageBox.Show("ERES UN USUARIO!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            oFormulario.btnSeguridad.Visible = false;
-                            oFormulario.btnReportes.Visible = false;
-                            break;
-                        default:
-                            MessageBox.Show("ERES UN USUARIO LIMITADO!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            oFormulario.btnSeguridad.Visible = false;
-                            oFormulario.btnReportes.Visible = false;
-                            oFormulario.btnCandidatos.Visible = false;
-                            oFormulario.Partidos.Visible = false;
-                            oFormulario.btnMesas.Visible = false;
-                            break;
-                    }            
-                    oFormulario.lblUsuario.Text = objUsuario.NOMBRE_COMPLETO;
-                    oFormulario.lblFechaIngreso.Text = fecha;
-                    oFormulario.Show();
-                    this.Hide();
+                        this.Hide();
+                        objproceso.id_tipo_user = objUsuario.TIPO;
+                        objproceso.nombre_completo =  objUsuario.NOMBRE_COMPLETO;
+                        objproceso.dni_user = objUsuario.DNI;
+                        objproceso.ShowDialog();
+                    }
+                    else
+                    {
+                        switch (objUsuario.TIPO)
+                        {
+                            case 1:
+                                sender = MessageBox.Show("DESEA REGISTRAR EL NUEVO PROCESO ELECTORAL!?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                if (sender.Equals(DialogResult.Yes))
+                                {
+                                    this.Hide();
+                                    frmNUEVO_PROCESO_ELECTORAL objpro = new frmNUEVO_PROCESO_ELECTORAL();
+                                    objpro.ShowDialog();                                    
+                                }
+                                break;
+                            default:
+                                MessageBox.Show("NO EXISTE NINGUN PROCESO ELECTORAL EN EL SISTEMA SISCO!", "Mensaje!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                this.Close();
+                                break;
+
+                        }
+                    }
+                    
                 }
             }
             else 

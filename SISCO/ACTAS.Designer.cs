@@ -122,6 +122,7 @@
             this.lblNroMesa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblElecciones = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -241,6 +242,7 @@
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox12.Controls.Add(this.label15);
             this.groupBox12.Controls.Add(this.lblverificadoRegional);
             this.groupBox12.Controls.Add(this.txtTotalVotosAutomaticoD);
             this.groupBox12.Controls.Add(this.txttotalVotosAutomaticoP);
@@ -274,7 +276,7 @@
             this.lblverificadoRegional.AutoSize = true;
             this.lblverificadoRegional.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblverificadoRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
-            this.lblverificadoRegional.Location = new System.Drawing.Point(7, 163);
+            this.lblverificadoRegional.Location = new System.Drawing.Point(78, 156);
             this.lblverificadoRegional.Name = "lblverificadoRegional";
             this.lblverificadoRegional.Size = new System.Drawing.Size(125, 16);
             this.lblverificadoRegional.TabIndex = 18;
@@ -284,10 +286,10 @@
             // txtTotalVotosAutomaticoD
             // 
             this.txtTotalVotosAutomaticoD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTotalVotosAutomaticoD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalVotosAutomaticoD.BackColor = System.Drawing.Color.White;
             this.txtTotalVotosAutomaticoD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalVotosAutomaticoD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalVotosAutomaticoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalVotosAutomaticoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalVotosAutomaticoD.Location = new System.Drawing.Point(189, 247);
             this.txtTotalVotosAutomaticoD.Name = "txtTotalVotosAutomaticoD";
             this.txtTotalVotosAutomaticoD.ReadOnly = true;
@@ -297,10 +299,10 @@
             // txttotalVotosAutomaticoP
             // 
             this.txttotalVotosAutomaticoP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txttotalVotosAutomaticoP.BackColor = System.Drawing.SystemColors.Control;
+            this.txttotalVotosAutomaticoP.BackColor = System.Drawing.Color.White;
             this.txttotalVotosAutomaticoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txttotalVotosAutomaticoP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txttotalVotosAutomaticoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txttotalVotosAutomaticoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txttotalVotosAutomaticoP.Location = new System.Drawing.Point(189, 226);
             this.txttotalVotosAutomaticoP.Name = "txttotalVotosAutomaticoP";
             this.txttotalVotosAutomaticoP.ReadOnly = true;
@@ -322,10 +324,10 @@
             // txtTotalVotosEmiDRegional
             // 
             this.txtTotalVotosEmiDRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalVotosEmiDRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalVotosEmiDRegional.BackColor = System.Drawing.Color.White;
             this.txtTotalVotosEmiDRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalVotosEmiDRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalVotosEmiDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalVotosEmiDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalVotosEmiDRegional.Location = new System.Drawing.Point(784, 222);
             this.txtTotalVotosEmiDRegional.Name = "txtTotalVotosEmiDRegional";
             this.txtTotalVotosEmiDRegional.Size = new System.Drawing.Size(131, 23);
@@ -335,10 +337,10 @@
             // txtVotosInpugDRegional
             // 
             this.txtVotosInpugDRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosInpugDRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosInpugDRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosInpugDRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosInpugDRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosInpugDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosInpugDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosInpugDRegional.Location = new System.Drawing.Point(784, 200);
             this.txtVotosInpugDRegional.Name = "txtVotosInpugDRegional";
             this.txtVotosInpugDRegional.Size = new System.Drawing.Size(131, 23);
@@ -348,10 +350,10 @@
             // txtVotosNulosDRegional
             // 
             this.txtVotosNulosDRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosNulosDRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosNulosDRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosNulosDRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosNulosDRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosNulosDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosNulosDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosNulosDRegional.Location = new System.Drawing.Point(784, 178);
             this.txtVotosNulosDRegional.Name = "txtVotosNulosDRegional";
             this.txtVotosNulosDRegional.Size = new System.Drawing.Size(131, 23);
@@ -361,10 +363,10 @@
             // txtVotosBlancoDRegional
             // 
             this.txtVotosBlancoDRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosBlancoDRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosBlancoDRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosBlancoDRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosBlancoDRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosBlancoDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosBlancoDRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosBlancoDRegional.Location = new System.Drawing.Point(784, 156);
             this.txtVotosBlancoDRegional.Name = "txtVotosBlancoDRegional";
             this.txtVotosBlancoDRegional.Size = new System.Drawing.Size(131, 23);
@@ -450,10 +452,10 @@
             // txtTotalVotosEmiPRegional
             // 
             this.txtTotalVotosEmiPRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalVotosEmiPRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalVotosEmiPRegional.BackColor = System.Drawing.Color.White;
             this.txtTotalVotosEmiPRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalVotosEmiPRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalVotosEmiPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalVotosEmiPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalVotosEmiPRegional.Location = new System.Drawing.Point(643, 222);
             this.txtTotalVotosEmiPRegional.Name = "txtTotalVotosEmiPRegional";
             this.txtTotalVotosEmiPRegional.Size = new System.Drawing.Size(135, 23);
@@ -463,10 +465,10 @@
             // txtVotosInpugPRegional
             // 
             this.txtVotosInpugPRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosInpugPRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosInpugPRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosInpugPRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosInpugPRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosInpugPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosInpugPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosInpugPRegional.Location = new System.Drawing.Point(643, 200);
             this.txtVotosInpugPRegional.Name = "txtVotosInpugPRegional";
             this.txtVotosInpugPRegional.Size = new System.Drawing.Size(135, 23);
@@ -476,10 +478,10 @@
             // txtVotosNulosPRegional
             // 
             this.txtVotosNulosPRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosNulosPRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosNulosPRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosNulosPRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosNulosPRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosNulosPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosNulosPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosNulosPRegional.Location = new System.Drawing.Point(643, 178);
             this.txtVotosNulosPRegional.Name = "txtVotosNulosPRegional";
             this.txtVotosNulosPRegional.Size = new System.Drawing.Size(135, 23);
@@ -489,10 +491,10 @@
             // txtVotosBlancoPRegional
             // 
             this.txtVotosBlancoPRegional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVotosBlancoPRegional.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVotosBlancoPRegional.BackColor = System.Drawing.Color.White;
             this.txtVotosBlancoPRegional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVotosBlancoPRegional.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVotosBlancoPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtVotosBlancoPRegional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtVotosBlancoPRegional.Location = new System.Drawing.Point(643, 156);
             this.txtVotosBlancoPRegional.Name = "txtVotosBlancoPRegional";
             this.txtVotosBlancoPRegional.Size = new System.Drawing.Size(135, 23);
@@ -744,7 +746,7 @@
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.lblElecciones);
-            this.tabPage3.ForeColor = System.Drawing.Color.Black;
+            this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -801,10 +803,10 @@
             // txtTotalAutomaticoD
             // 
             this.txtTotalAutomaticoD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTotalAutomaticoD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalAutomaticoD.BackColor = System.Drawing.Color.White;
             this.txtTotalAutomaticoD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalAutomaticoD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalAutomaticoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalAutomaticoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalAutomaticoD.Location = new System.Drawing.Point(206, 248);
             this.txtTotalAutomaticoD.Name = "txtTotalAutomaticoD";
             this.txtTotalAutomaticoD.ReadOnly = true;
@@ -814,10 +816,10 @@
             // txtTotalAutomaticoP
             // 
             this.txtTotalAutomaticoP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTotalAutomaticoP.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalAutomaticoP.BackColor = System.Drawing.Color.White;
             this.txtTotalAutomaticoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalAutomaticoP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalAutomaticoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalAutomaticoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalAutomaticoP.Location = new System.Drawing.Point(206, 225);
             this.txtTotalAutomaticoP.Name = "txtTotalAutomaticoP";
             this.txtTotalAutomaticoP.ReadOnly = true;
@@ -839,7 +841,7 @@
             // txtvEmitidosD
             // 
             this.txtvEmitidosD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvEmitidosD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvEmitidosD.BackColor = System.Drawing.Color.White;
             this.txtvEmitidosD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvEmitidosD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtvEmitidosD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
@@ -852,7 +854,7 @@
             // txtvInpugnadosD
             // 
             this.txtvInpugnadosD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvInpugnadosD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvInpugnadosD.BackColor = System.Drawing.Color.White;
             this.txtvInpugnadosD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvInpugnadosD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtvInpugnadosD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
@@ -865,7 +867,7 @@
             // txtvNulosD
             // 
             this.txtvNulosD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvNulosD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvNulosD.BackColor = System.Drawing.Color.White;
             this.txtvNulosD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvNulosD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtvNulosD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
@@ -878,7 +880,7 @@
             // txtvBlancoD
             // 
             this.txtvBlancoD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvBlancoD.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvBlancoD.BackColor = System.Drawing.Color.White;
             this.txtvBlancoD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvBlancoD.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtvBlancoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
@@ -967,10 +969,10 @@
             // txtTotalEmitidosP
             // 
             this.txtTotalEmitidosP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalEmitidosP.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalEmitidosP.BackColor = System.Drawing.Color.White;
             this.txtTotalEmitidosP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotalEmitidosP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalEmitidosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtTotalEmitidosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtTotalEmitidosP.Location = new System.Drawing.Point(643, 222);
             this.txtTotalEmitidosP.Name = "txtTotalEmitidosP";
             this.txtTotalEmitidosP.Size = new System.Drawing.Size(135, 23);
@@ -980,10 +982,10 @@
             // txtinpugnadosP
             // 
             this.txtinpugnadosP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtinpugnadosP.BackColor = System.Drawing.SystemColors.Control;
+            this.txtinpugnadosP.BackColor = System.Drawing.Color.White;
             this.txtinpugnadosP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtinpugnadosP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtinpugnadosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtinpugnadosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtinpugnadosP.Location = new System.Drawing.Point(643, 200);
             this.txtinpugnadosP.Name = "txtinpugnadosP";
             this.txtinpugnadosP.Size = new System.Drawing.Size(135, 23);
@@ -993,10 +995,10 @@
             // txtvNulosP
             // 
             this.txtvNulosP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvNulosP.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvNulosP.BackColor = System.Drawing.Color.White;
             this.txtvNulosP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvNulosP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtvNulosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtvNulosP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtvNulosP.Location = new System.Drawing.Point(643, 178);
             this.txtvNulosP.Name = "txtvNulosP";
             this.txtvNulosP.Size = new System.Drawing.Size(135, 23);
@@ -1006,10 +1008,10 @@
             // txtvblancoP
             // 
             this.txtvblancoP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtvblancoP.BackColor = System.Drawing.SystemColors.Control;
+            this.txtvblancoP.BackColor = System.Drawing.Color.White;
             this.txtvblancoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvblancoP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtvblancoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.txtvblancoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
             this.txtvblancoP.Location = new System.Drawing.Point(643, 156);
             this.txtvblancoP.Name = "txtvblancoP";
             this.txtvblancoP.Size = new System.Drawing.Size(135, 23);
@@ -1274,6 +1276,19 @@
             this.lblElecciones.Text = "ELECCIONES REGIONALES Y MUNICIPALES 2022";
             this.lblElecciones.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(174)))));
+            this.label15.Location = new System.Drawing.Point(6, 156);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 16);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "ESTADO :";
+            this.label15.Visible = false;
+            // 
             // ACTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1412,5 +1427,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VOTODISTR;
         private System.Windows.Forms.Label lblverificadoRegional;
         private System.Windows.Forms.Label lblVerificadoMunicipal;
+        private System.Windows.Forms.Label label15;
     }
 }
