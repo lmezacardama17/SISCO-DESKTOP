@@ -83,6 +83,16 @@ namespace SISCO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cambiar_16 {
+            get {
+                object obj = ResourceManager.GetObject("cambiar-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -96,6 +106,26 @@ namespace SISCO.Properties {
         internal static System.Drawing.Bitmap cerrar1 {
             get {
                 object obj = ResourceManager.GetObject("cerrar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_sign_16px {
+            get {
+                object obj = ResourceManager.GetObject("delete_sign_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar_16 {
+            get {
+                object obj = ResourceManager.GetObject("editar-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

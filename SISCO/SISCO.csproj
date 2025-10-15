@@ -143,6 +143,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEDITAR_PROCESO_ELECTORAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEDITAR_PROCESO_ELECTORAL.Designer.cs">
+      <DependentUpon>frmEDITAR_PROCESO_ELECTORAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNUEVO_PROCESO_ELECTORAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEDITAR_PROCESO_ELECTORAL.resx">
+      <DependentUpon>frmEDITAR_PROCESO_ELECTORAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNUEVO_PROCESO_ELECTORAL.resx">
       <DependentUpon>frmNUEVO_PROCESO_ELECTORAL.cs</DependentUpon>
@@ -352,6 +361,9 @@
     <Content Include="move_by_trolley_30px.ico" />
     <None Include="Resources\logo renovacion.jpeg" />
     <None Include="Resources\logoreno %281%29.png" />
+    <None Include="Resources\editar-16.png" />
+    <None Include="Resources\delete_sign_16px.png" />
+    <None Include="Resources\cambiar-16.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

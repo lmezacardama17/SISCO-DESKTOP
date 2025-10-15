@@ -14,6 +14,7 @@ namespace SISCO
 {
     public partial class CANDIDATOS : Form
     {
+        public int id_proceso_electoral;
         public CANDIDATOS()
         {
             InitializeComponent();

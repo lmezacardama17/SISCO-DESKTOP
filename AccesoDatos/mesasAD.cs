@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Entidades;
+using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+using System.Windows.Forms;
+using Entidades;
 
 namespace AccesoDatos
 {
@@ -13,6 +16,18 @@ namespace AccesoDatos
     {
         ConexionSQL oConexion = new ConexionSQL();
 
+        public static DataTable ValidarMesaProcesoElectoral(int id_proceso_electoral)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
+            {
+                DataTable dt = new DataTable();
+                string query = @"select * from proceso_electoral pl inner join mesa m on m.id_proceso_electoral=pl.id where pl.id='"+id_proceso_electoral+"'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                adap.Fill(dt);
+                return dt;
+            }
+        }
         public List<mesas> BusquedaMesas(string nro_mesa, string estado)
         {
             SqlCommand cmd = new SqlCommand();

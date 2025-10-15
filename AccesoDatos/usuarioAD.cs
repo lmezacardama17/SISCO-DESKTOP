@@ -151,7 +151,7 @@ namespace AccesoDatos
             try
             {
                 oConexion.conectar();
-                cmd.CommandText = "select dni, login, clave, nombre_completo, fecha_naci, tipo, fecha_registro, estado from usuario where (dni like '" + dni + "%') or ( nombre_completo like '" + nombre_completo + "%')";
+                cmd.CommandText = "select dni, login, clave, nombre_completo, fecha_naci, tipo, fecha_registro, estado from usuario where ((dni like '" + dni + "%') or ( nombre_completo like '" + nombre_completo + "%'))";
                 cmd.Connection = oConexion.conexion;
                 oConexion.conexion.Open();
                 SqlDataReader resultado = cmd.ExecuteReader();

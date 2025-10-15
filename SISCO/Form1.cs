@@ -90,16 +90,9 @@ namespace SISCO
         {
             Application.Exit();
         }
-
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new ACTAS());
+            AbrirFormHijaACTAS(new ACTAS());
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -107,6 +100,42 @@ namespace SISCO
             System.DateTime lFechaHora = System.DateTime.Now;
             string lsHora = lFechaHora.ToLongTimeString();
             lblHoraActual.Text = lsHora;
+        }
+        private void AbrirFormHijaACTAS(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            ((ACTAS)fh).id_proceso_electoral = id_proceso_electoral;
+            fh.Show();
+        }
+        private void AbrirFormHijaPARTIDOS(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            ((PARTIDOS)fh).id_proceso_electoral = id_proceso_electoral;
+            fh.Show();
+        }
+        private void AbrirFormHijaCANDIDATOS(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            ((CANDIDATOS)fh).id_proceso_electoral = id_proceso_electoral;
+            fh.Show();
         }
         private void AbrirFormHija(object formhija)
         {
@@ -126,7 +155,7 @@ namespace SISCO
 
         private void Partidos_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new PARTIDOS());
+            AbrirFormHijaPARTIDOS(new PARTIDOS());
         }
 
         private void btnSeguridad_Click(object sender, EventArgs e)
@@ -136,7 +165,7 @@ namespace SISCO
 
         private void btnCandidatos_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new CANDIDATOS());
+            AbrirFormHijaCANDIDATOS(new CANDIDATOS());
         }
     }
 }

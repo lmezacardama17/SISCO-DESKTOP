@@ -52,7 +52,7 @@ namespace SISCO
                             proceso_electoralAD.InsertarDetalle(id_proceso_electoral, id_tipo_acta_e);
                         }
                         MessageBox.Show("SE HA REGISTRADO CORRECTAMENTE!", "Mensaje!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Application.Exit();
+                        this.Close();
                     }
                 }
             }

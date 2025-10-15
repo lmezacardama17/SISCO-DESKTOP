@@ -18,7 +18,7 @@ namespace Entidades
         private byte[] _logo;
         private int _dato;
         private int _orden;
-        
+        private string _estado;
       
         public int ID
         { get { return _id; } set { _id = value; } }
@@ -33,13 +33,16 @@ namespace Entidades
         { get { return _dato; } set { _dato = value; } }
         public int ORDEN
         { get { return _orden; } set { _orden = value; } }
-        public partido(int id, string nombre_politico, byte[] logo, int dato, int orden)
+        public string ESTADO
+        { get { return _estado; } set { _estado = value; } }
+        public partido(int id, string nombre_politico, byte[] logo, int dato, int orden, string estado)
         {
             _id = id;
             _nombre_politico = nombre_politico;
             _logo = logo;
             _dato = dato;
-            _orden = orden;                                 
+            _orden = orden;
+            _estado = estado;
         }
     }
 }

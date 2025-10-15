@@ -16,6 +16,7 @@ namespace SISCO
 {
     public partial class ACTAS : Form
     {
+        public int id_proceso_electoral;
         private int doc = 0;
         string regional = "ACTA REGIONAL";
         string municipal = "ACTA MUNICIPAL";

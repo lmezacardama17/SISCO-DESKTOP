@@ -58,7 +58,6 @@ namespace AccesoDatos
                 return dt;
             }
         }
-
         public static DataTable ListaOrganizacionRegional()
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
@@ -83,8 +82,6 @@ namespace AccesoDatos
                 return dt;
             }
         }
-      
-  
         public static DataTable CargarListado()
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
@@ -102,24 +99,25 @@ namespace AccesoDatos
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
             {
                 DataTable dt = new DataTable();
-                string query = "select id, nombre_politico, logo, dato, orden from partido where (nombre_politico like '" + nombre_politico + "%')";
+                string query = "select id, nombre_politico, logo, dato, orden, estado from partido where (nombre_politico like '" + nombre_politico + "%')";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter adap = new SqlDataAdapter(cmd);
                 adap.Fill(dt);
                 return dt;
             }
         }
-        public static void Insertar(string nombre_politico, byte[] logo, int dato, int orden)
+        public static void Insertar(string nombre_politico, byte[] logo, int dato, int orden, string estado)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
             {
-                string query = "INSERT INTO partido(nombre_politico,logo,dato,orden) VALUES(@nombre_politico,@logo,@dato,@orden)";
+                string query = "INSERT INTO partido(nombre_politico,logo,dato,orden, estado) VALUES(@nombre_politico,@logo,@dato,@orden,@estado)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@nombre_politico", nombre_politico);
                 cmd.Parameters.Add("@logo", System.Data.SqlDbType.Image).Value = logo;
                 cmd.Parameters.AddWithValue("@dato", dato);
                 cmd.Parameters.AddWithValue("@orden",orden);
+                cmd.Parameters.AddWithValue("@estado", estado);
                 conn.Open();
                 try
                 {
@@ -148,8 +146,6 @@ namespace AccesoDatos
 
                 cmd.Parameters.AddWithValue("@nombre_politico", nombre_politico);
                 cmd.Parameters.Add("@logo", System.Data.SqlDbType.Image).Value = logo;
-                //SqlParameter imageParam = cmd.Parameters.Add("@logo", System.Data.SqlDbType.Image);
-                //imageParam.Value = logo;
                 cmd.Parameters.AddWithValue("@orden", orden);
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -162,6 +158,49 @@ namespace AccesoDatos
             }
             
         }
-   
+        public static void ActualizarEstadoPartido(string estado,  int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
+            {
+                conn.Open();
+
+                string query = @"UPDATE partido SET
+                                        estado = @estado
+                                WHERE id = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@estado", estado);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int exito = cmd.ExecuteNonQuery();
+                if (exito == 1)
+                {
+                    cmd.Connection.Close();
+                }
+
+            }
+
+        }
+        public static void EliminarPartido(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
+            {
+                conn.Open();
+
+                string query = @"DELETE FROM partido WHERE id = @id";
+                SqlCommand cmd = new SqlCommand(query, conn);                
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int exito = cmd.ExecuteNonQuery();
+                if (exito == 1)
+                {
+                    cmd.Connection.Close();
+                }
+
+            }
+
+        }
+
     }
 }
