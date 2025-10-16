@@ -28,6 +28,23 @@ namespace AccesoDatos
                 return dt;
             }
         }
+        public static DataTable CargarTipoMesaProcesoElectoral(int id_proceso_electoral)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
+            {
+                DataTable dt = new DataTable();
+                string query = @"select    ta.id,
+	                                       ta.descripcion,
+	                                       ta.estado 
+                                    from detalle_proceso_electoral dpe
+                                    inner join tipo_acta ta on dpe.id_tipo_acta=ta.id
+                                    where dpe.id_proceso_electoral='" + id_proceso_electoral + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                adap.Fill(dt);
+                return dt;
+            }
+        }
         public List<mesas> BusquedaMesas(string nro_mesa, string estado)
         {
             SqlCommand cmd = new SqlCommand();

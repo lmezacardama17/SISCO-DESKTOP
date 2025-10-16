@@ -21,31 +21,26 @@ namespace SISCO
         {
             InitializeComponent();
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
         }
-
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
         }
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -55,37 +50,31 @@ namespace SISCO
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
 
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void btnReportes_Click(object sender, EventArgs e)
         {
             SubmenuReportes.Visible = true;
         }
-
         private void btnrptventa_Click(object sender, EventArgs e)
         {
             SubmenuReportes.Visible = false;
             AbrirFormHija(new REPORTE_MESAS());
             
         }
-
         private void btnrptcompra_Click(object sender, EventArgs e)
         {
             SubmenuReportes.Visible = false;
             AbrirFormHija(new REPORTE_ACTAS());
         }
-
         private void btnrptpagos_Click(object sender, EventArgs e)
         {
             SubmenuReportes.Visible = false;
             AbrirFormHija(new TOP_PARTIDOS());
         }
-
         private void btnsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -94,7 +83,6 @@ namespace SISCO
         {
             AbrirFormHijaACTAS(new ACTAS());
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             System.DateTime lFechaHora = System.DateTime.Now;
@@ -137,6 +125,18 @@ namespace SISCO
             ((CANDIDATOS)fh).id_proceso_electoral = id_proceso_electoral;
             fh.Show();
         }
+        private void AbrirFormHijaMESAS(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            ((MESAS)fh).id_proceso_electoral = id_proceso_electoral;
+            fh.Show();
+        }
         private void AbrirFormHija(object formhija)
         {
             if (this.panelContenedor.Controls.Count > 0)
@@ -150,19 +150,16 @@ namespace SISCO
         }
         private void btnMesas_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new MESAS());
+            AbrirFormHijaMESAS(new MESAS());
         }
-
         private void Partidos_Click(object sender, EventArgs e)
         {
             AbrirFormHijaPARTIDOS(new PARTIDOS());
         }
-
         private void btnSeguridad_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new SEGURIDAD());
         }
-
         private void btnCandidatos_Click(object sender, EventArgs e)
         {
             AbrirFormHijaCANDIDATOS(new CANDIDATOS());

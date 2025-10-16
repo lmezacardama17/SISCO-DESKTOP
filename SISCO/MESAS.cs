@@ -13,15 +13,13 @@ using Microsoft.Office.Interop;
 using System.Text.RegularExpressions;
 using Entidades;
 using LogicaNegocio;
+using AccesoDatos;
 
 namespace SISCO
 {
     public partial class MESAS : Form
     {
-        private int doc = 0;
-        private int existeMesa = 0;
-        private int selecionProv = 0;
-        private int selecionDist = 0;
+        public int id_proceso_electoral, doc = 0, existeMesa = 0, selecionProv = 0, selecionDist = 0;
         private List<ubprovincia> lista = null;
         private List<ubdistrito> listaDistrito = null;
         private List<mesas> listaMesas = null;
@@ -34,24 +32,30 @@ namespace SISCO
         {
             InitializeComponent();
         }
-
-        private void MESAS_Load(object sender, EventArgs e)
+        public void CargaCombobox()
         {
-            List<string> TipoMesa = new List<string>();
-            TipoMesa.Add("SELECCIONE..");
-            TipoMesa.Add("ACTA REGIONAL");
-            TipoMesa.Add("ACTA MUNICIPAL");
-            cboxTipoMesa.DataSource = TipoMesa;
+            DataTable dt, dtx;
+            dt = proceso_electoralAD.ListaProcesoElectoralCandidato(id_proceso_electoral);
+            cboxProceso.DataSource = dt;
+            cboxProceso.DisplayMember = "descripcion";
+            cboxProceso.ValueMember = "id";
 
+            dtx = mesasAD.CargarTipoMesaProcesoElectoral(id_proceso_electoral);
+            cboxTipoMesa.DataSource = dtx;
+            cboxTipoMesa.DisplayMember = "descripcion";
+            cboxTipoMesa.ValueMember = "id";
 
             ubdepartamentoLN objDepa = new ubdepartamentoLN();
             cboxDepartamento.DataSource = objDepa.Listado();
             cboxDepartamento.ValueMember = "idDepa";
             cboxDepartamento.DisplayMember = "departamento";
             btnExaminar.Enabled = false;
+        }
+        private void MESAS_Load(object sender, EventArgs e)
+        {
+            CargaCombobox();
 
         }
-
         private void cboxDepartamento_SelectionChangeCommitted(object sender, EventArgs e)
         {
             selecionProv = Convert.ToInt32(cboxDepartamento.SelectedValue);
@@ -61,23 +65,22 @@ namespace SISCO
             cboxProvincia.DataSource = lista;
             cboxProvincia.ValueMember = "idProv";
             cboxProvincia.DisplayMember = "provincia";
+            cboxProvincia.Enabled = true;
         }
-
         private void cboxProvincia_SelectionChangeCommitted(object sender, EventArgs e)
         {
             selecionDist = Convert.ToInt32(cboxProvincia.SelectedValue);
-
             ubdistritoLN objDistrito = new ubdistritoLN();
             listaDistrito = objDistrito.ListaAñidada(selecionDist);
             cboxDistrito.DataSource = listaDistrito;
             cboxDistrito.ValueMember = "idDist";
             cboxDistrito.DisplayMember = "distrito";
+            cboxDistrito.Enabled = true;
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (chkCargaMasiva.Checked==true) {
-
+            if (chkCargaMasiva.Checked==true) 
+            {
                 sender = MessageBox.Show("DESEA GUARDAR LA MIGRACION DEL ARCHIVO EXCEL A LA BD DE MESAS DE VOTACION.?", "Advertencia!", MessageBoxButtons.YesNo);
                 if (sender.Equals(DialogResult.Yes)) {
                     if (dgvMesas.DataSource == null)
@@ -166,121 +169,86 @@ namespace SISCO
             }
            
         }
-        private void cboxTipoMesa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            if (regional == Convert.ToString(cboxTipoMesa.SelectedValue)) {
-                cboxDepartamento.Visible = true;
-                cboxProvincia.Visible = true;
-                cboxDistrito.Visible = true;
-            }
-            else if(municipal == Convert.ToString(cboxTipoMesa.SelectedValue))
-            {
-                cboxDepartamento.Visible = true;
-                cboxProvincia.Visible = true;
-                cboxDistrito.Visible = true;
-            }
-            else
-            {
-                cboxDepartamento.Visible = false;
-                cboxProvincia.Visible = false;
-                cboxDistrito.Visible = false;
-            }
-        }
-
         private void txtNroMesa_MouseEnter(object sender, EventArgs e)
         {
             if (txtNroMesa.Text == "NUMERO DE MESA")
             {
                 txtNroMesa.ResetText();
-                //txtNroMesa.ForeColor = Color.DarkBlue;
+                txtNroMesa.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtnomColegio_MouseEnter(object sender, EventArgs e)
         {
             if (txtnomColegio.Text == "INSTITUCION / COLEGIO")
             {
                 txtnomColegio.ResetText();
-                //txtnomColegio.ForeColor = Color.DarkBlue;
+                txtnomColegio.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtDireLugar_MouseEnter(object sender, EventArgs e)
         {
             if (txtDireLugar.Text == "DIRECCION / LUGAR DE LA MESA DE VOTACION")
             {
                 txtDireLugar.ResetText();
-                //txtDireLugar.ForeColor = Color.DarkBlue;
+                txtDireLugar.ForeColor = Color.FromArgb(1, 99, 174);
             }
-
         }
-
         private void txtNroVotantes_MouseEnter(object sender, EventArgs e)
         {
             if (txtNroVotantes.Text == "NUMERO DE VOTANTES HABILES")
             {
                 txtNroVotantes.ResetText();
-                //txtNroVotantes.ForeColor = Color.DarkBlue;
+                txtNroVotantes.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
             if (txtBuscarMesa.Text == "BUSCAR NUMEROS DE MESA")
             {
                 txtBuscarMesa.ResetText();
-                //txtBuscarMesa.ForeColor = Color.DarkBlue;
+                txtBuscarMesa.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtNroMesa_MouseLeave(object sender, EventArgs e)
         {
             if (txtNroMesa.Text == "")
             {
                 txtNroMesa.Text = "NUMERO DE MESA";
-                //txtNroMesa.ForeColor = Color.DarkBlue;
+                txtNroMesa.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtnomColegio_MouseLeave(object sender, EventArgs e)
         {
             if (txtnomColegio.Text == "")
             {
                 txtnomColegio.Text = "INSTITUCION / COLEGIO";
-                //txtnomColegio.ForeColor = Color.DarkBlue;
+                txtnomColegio.ForeColor = Color.FromArgb(1, 99, 174);
             }
-
         }
-
         private void txtDireLugar_MouseLeave(object sender, EventArgs e)
         {
             if (txtDireLugar.Text == "")
             {
                 txtDireLugar.Text = "DIRECCION / LUGAR DE LA MESA DE VOTACION";
-                //txtDireLugar.ForeColor = Color.DarkBlue;
+                txtDireLugar.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtNroVotantes_MouseLeave(object sender, EventArgs e)
         {
             if (txtNroVotantes.Text == "")
             {
                 txtNroVotantes.Text = "NUMERO DE VOTANTES HABILES";
-                //txtNroVotantes.ForeColor = Color.DarkBlue;
+                txtNroVotantes.ForeColor = Color.FromArgb(1, 99, 174);
             }
         }
-
         private void txtBuscarMesa_MouseLeave(object sender, EventArgs e)
         {
             if (txtBuscarMesa.Text == "")
             {
                 txtBuscarMesa.Text = "BUSCAR NUMEROS DE MESA";
-                //txtBuscarMesa.ForeColor = Color.DarkBlue;
+                txtBuscarMesa.ForeColor = Color.FromArgb(1, 99, 174);
             }
-            
         }
-
         private void btnExaminar_Click(object sender, EventArgs e)
         {
             dgvMesas.DataSource = null;
@@ -371,27 +339,19 @@ namespace SISCO
         private void chkCargaMasiva_CheckedChanged(object sender, EventArgs e)
         {
             if (chkCargaMasiva.Checked == true)
-            {
-                List<string> TipoMesa = new List<string>();
-                TipoMesa.Add("SELECCIONE..");
-                cboxTipoMesa.DataSource = TipoMesa;
+            {                
                 cboxTipoMesa.Enabled = false;
+                cboxDepartamento.Enabled = false;
                 btnExaminar.Enabled = true;
             }
-            else {
-                List<string> TipoMesa1 = new List<string>();
-                TipoMesa1.Add("SELECCIONE..");
-                TipoMesa1.Add("MESA REGIONAL");
-                TipoMesa1.Add("MESA PROVINCIAL");
-                TipoMesa1.Add("MESA DISTRITAL");
-                cboxTipoMesa.DataSource = TipoMesa1;
+            else 
+            {
+                CargaCombobox();
                 cboxTipoMesa.Enabled = true;
+                cboxDepartamento.Enabled = true;
                 btnExaminar.Enabled = false;
-            }
-            
-            
+            }       
         }
-
         private void MESAS_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)(Keys.Enter))

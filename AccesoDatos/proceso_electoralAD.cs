@@ -25,6 +25,18 @@ namespace AccesoDatos
                 return dt;
             }
         }
+        public static DataTable ListaProcesoElectoralCandidato(int id_proceso)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))
+            {
+                DataTable dt = new DataTable();
+                string query = @"select * from proceso_electoral where id='"+id_proceso+"' and estado='ACTIVO'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                adap.Fill(dt);
+                return dt;
+            }
+        }
         public static DataTable validarProcesoElectoralIngreso(int id, string ano)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SISCO.Properties.Settings.SISCOConnectionString"].ToString()))

@@ -9,12 +9,12 @@ namespace LogicaNegocio
 {
     public class candidatoLN
     {
-        public void Insertar(int id_partido, string nombre_completo, string tipo_candidato, string postula)
+        public void Insertar(int id_proceso_electoral, int id_partido, string nombre_completo, string tipo_candidato, string postula)
         {
             try
             {
                 candidatoAD objCandiAD = new candidatoAD();
-                objCandiAD.Insertar(id_partido, nombre_completo, tipo_candidato, postula);
+                objCandiAD.Insertar(id_proceso_electoral, id_partido, nombre_completo, tipo_candidato, postula);
             }
             catch (Exception ex)
             {
